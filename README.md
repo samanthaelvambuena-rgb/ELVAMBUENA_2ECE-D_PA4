@@ -69,7 +69,8 @@ The following functions were used in this problem:
 
 >Since MATPLOTLIB is already initialized in the first problem we can move on to the next function.
 
-To return a GroupBy object, grouped by values in column track and index in average **.groupby(' ')[' ']**. Then, to get the mean of the Average **.mean** is used. And **.reset_index()** is used to reset index of DataFrame to row numbers, moving index to columns. Lastly, the data are store in **track_mean, gender_mean, hometown_mean** to be able to display the three summary tables.
+To return a GroupBy object, **.groupby(' ')** is used to group the rows for the data to be organized and **['Average']** is used to calculate the mean for each category. Then, to get the mean of the Average **.mean** is used. And **.reset_index()** is used to reset index of DataFrame to row numbers, moving index to columns. Lastly, the data are store in **track_mean, gender_mean, hometown_mean** to be able to display the three summary tables.
+
 ```python
 track_mean=whole.groupby('Track')['Average'].mean().reset_index()
 gender_mean=whole.groupby('Gender')['Average'].mean().reset_index()
@@ -84,7 +85,10 @@ display(gender_mean)
 print('Mean of Average for HOMETOWN:')
 display(hometown_mean)
 ```
-Fristly, to be able to create a bar chart, matplotlib is use and is initialized using **import matplotlib.pyplot as plt**.
+Firstly, to be able to create a bar chart, matplotlib is use and is initialized using **import matplotlib.pyplot as plt**. Next, to create a figure where the graph will be displayed **.figure()** is used and to specify the overall size of the figure it is indicated using **figsize=(15,6)** where (width, height). Then to allow three bar charts to be displayed in one figure **.subplot()** is used where the index used means (row, column, position). Now, to plot the bar use **plt.bar()** where the **category_mean['Category']** is for the x-axis and **category_mean['Average']** is used to show the mean Average score for each category. And to create a title to each graph **plt.title()** is used, **plt.xlabel()** to label the x-axis, and **plt.ylabel** to label the y-axis.
+
+Then, to automatically adjust the spacing between the three charts so that the titles and labels do not overlap **plt.tight_layout()** is used. Then, to provide the interpretation for the highest sample mean for each category **plt.text** is used and to add the texts in a specific position **(x-coordinate, y-coordinate, 'text')** while fontsize is used to specify the size of the text. Lastly, to display the completed figure **plt.show()** is used.
+
 ```python
 import matplotlib.pyplot as plt
 plt.figure(figsize=(15,6))
