@@ -15,9 +15,9 @@ This contains the Programming Assignment 4 for our course "Advance Computer Prog
 
 The following functions were used in this problem:
 
-Firstly, MATPLOTLIB should be initialized by:
+Firstly, PANDAS should be initialized for data wrangling as:
 ```python
-import matplotlib.pyplot as plt
+import pandas as pd
 ```
 Then, to read and write **EXCEL** file as there is a provided **board2.xlsx** file which contains the needed information **pd.read_excel()** is used. And I used the word **whole** to store the data.
 ```python
@@ -84,7 +84,7 @@ display(gender_mean)
 print('Mean of Average for HOMETOWN:')
 display(hometown_mean)
 ```
-
+Fristly, to be able to create a bar chart, matplotlib is use and is initialized using **import matplotlib.pyplot as plt**.
 ```python
 import matplotlib.pyplot as plt
 plt.figure(figsize=(15,6))
