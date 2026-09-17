@@ -15,7 +15,7 @@ This contains the Programming Assignment 4 for our course "Advance Computer Prog
 
 Firstly, MATPLOTLIB should be initialized by:
 ```python
-
+import matplotlib.pyplot as plt
 ```
 First, 
 ```python
@@ -39,7 +39,7 @@ Then,
 >Display VisFemale. Then display only the rows of VisFemale whose Average is at least 60. Do not overwrite VisFemale when performing this second filter.
 
 The following functions were used in this problem:
->Since PANDAS is already initialized in the first problem we can move on to the next function.
+>Since MATPLOTLIB is already initialized in the first problem we can move on to the next function.
 
 ```python
 
